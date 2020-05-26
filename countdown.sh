@@ -9,8 +9,8 @@
 #: ${positionX:="(w-text_w)/2"}
 : ${positionX:="0.05*w"}
 #: ${positionY:="(h-text_h)/2"}
-: ${positionY:="0.8*h-text_h"}
-: ${textPositionY:="0.8*h-3*text_h"}
+: ${positionY:="0.9*h-text_h"}
+: ${textPositionY:="0.9*h-3*text_h"}
 : ${soundFile:=./Robot_Coupe_No_Vocal_-_Lost_European.mp3}
 : ${outFile:="meetup_wait_2020-05_1080p.mp4"}
 : ${text:=""}
