@@ -19,5 +19,5 @@ ffmpeg -loop 1 \
 	-i $imageFile \
 	-stream_loop -1 -i $soundFile \
 	-c:v libx264 -r $fps -t $seconds -pix_fmt yuv420p \
-	-vf "fps=$fps,drawtext=fontfile='$fontFile':fontcolor=$fontColor:fontsize=$fontSize:x=$positionX:y=$textPositionY:text='$text',drawtext=fontfile='$fontFile':fontcolor=$fontColor:fontsize=$fontSize:x=$positionX:y=$positionY:text='%{eif\:($seconds-mod($seconds-t,60))/60\:d\:2}\:%{eif\:mod($seconds-t,60)\:d\:2}'" \
+	-vf "fps=$fps,drawtext=fontfile='$fontFile':fontcolor=$fontColor:fontsize=$fontSize:x=$positionX:y=$textPositionY:text='$text',drawtext=fontfile='$fontFile':fontcolor=$fontColor:fontsize=$fontSize:x=$positionX:y=$positionY:text='%{eif\:floor(($seconds-t)/60)\:d\:2}\:%{eif\:mod($seconds-t,60)\:d\:2}'" \
 	"$outFile"
